@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D95546F21DE21D0A0092FB2F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95546F11DE21D0A0092FB2F /* Constants.swift */; };
+		D95546F51DE21E0D0092FB2F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95546F41DE21E0D0092FB2F /* CustomView.swift */; };
+		D95546F71DE223D50092FB2F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95546F61DE223D50092FB2F /* RoundButton.swift */; };
+		D95546F91DE256E70092FB2F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95546F81DE256E70092FB2F /* CustomTextField.swift */; };
+		D95546FB1DE258B00092FB2F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95546FA1DE258B00092FB2F /* CustomButton.swift */; };
 		D9A833A91DE17EF000566B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A833A81DE17EF000566B88 /* AppDelegate.swift */; };
 		D9A833AB1DE17EF000566B88 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A833AA1DE17EF000566B88 /* LoginVC.swift */; };
 		D9A833AE1DE17EF000566B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A833AC1DE17EF000566B88 /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 		3BD667788E5B220E8A6394A7 /* Pods-Social-Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social-Network.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social-Network/Pods-Social-Network.release.xcconfig"; sourceTree = "<group>"; };
 		7E4BA221E3249875C3A03A2C /* Pods_Social_Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96AF34FC5FA5715C7B877FE5 /* Pods-Social-Network.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social-Network.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social-Network/Pods-Social-Network.debug.xcconfig"; sourceTree = "<group>"; };
+		D95546F11DE21D0A0092FB2F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D95546F41DE21E0D0092FB2F /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		D95546F61DE223D50092FB2F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		D95546F81DE256E70092FB2F /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D95546FA1DE258B00092FB2F /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D9A833A51DE17EF000566B88 /* Social-Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social-Network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A833A81DE17EF000566B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A833AA1DE17EF000566B88 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -50,6 +60,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D95546F31DE21D100092FB2F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D95546F11DE21D0A0092FB2F /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		D9A8339C1DE17EEF00566B88 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +89,7 @@
 		D9A833A71DE17EF000566B88 /* Social-Network */ = {
 			isa = PBXGroup;
 			children = (
+				D95546F31DE21D100092FB2F /* Util */,
 				D9E72D571DE1822000C92620 /* Model */,
 				D9E72D581DE1822600C92620 /* View */,
 				D9E72D591DE1822900C92620 /* Controller */,
@@ -94,6 +113,10 @@
 		D9E72D581DE1822600C92620 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D95546F41DE21E0D0092FB2F /* CustomView.swift */,
+				D95546F61DE223D50092FB2F /* RoundButton.swift */,
+				D95546F81DE256E70092FB2F /* CustomTextField.swift */,
+				D95546FA1DE258B00092FB2F /* CustomButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -241,7 +264,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A833AB1DE17EF000566B88 /* LoginVC.swift in Sources */,
+				D95546F71DE223D50092FB2F /* RoundButton.swift in Sources */,
+				D95546F91DE256E70092FB2F /* CustomTextField.swift in Sources */,
+				D95546F51DE21E0D0092FB2F /* CustomView.swift in Sources */,
+				D95546FB1DE258B00092FB2F /* CustomButton.swift in Sources */,
 				D9A833A91DE17EF000566B88 /* AppDelegate.swift in Sources */,
+				D95546F21DE21D0A0092FB2F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +313,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -307,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -335,6 +364,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -351,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
