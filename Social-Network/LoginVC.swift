@@ -9,21 +9,28 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class LoginVC: UIViewController {
     @IBOutlet weak var emailTxtField: CustomTextField!
-
     @IBOutlet weak var passwordTxtField: CustomTextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Check if there's a user in the keychain
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "showFeedVC", sender: nil)
+        }
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     @IBAction func facebookButtonTapped(_ sender: Any) {
         let facebookLogin = FBSDKLoginManager()
         
@@ -46,6 +53,10 @@ class LoginVC: UIViewController {
                 
                 if error == nil {
                     print("Email user is authenticated")
+                    if let currentUser = user {
+                        self.keychainSignIn(id: currentUser.uid)
+                        
+                    }
                 }else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         
@@ -53,6 +64,10 @@ class LoginVC: UIViewController {
                             print("Unable to authenticate with Firebase using email")
                         } else {
                             print("Sucessfully authenticated with Firebase")
+                            if let currentUser = user {
+                                self.keychainSignIn(id: currentUser.uid)
+                                
+                            }
                         }
                     })
                 }
@@ -72,8 +87,19 @@ class LoginVC: UIViewController {
                 print("ERROR: \(error)")
             } else {
                 print("Successfully authenticated with Firebase")
+                if let currentUser = user {
+                    self.keychainSignIn(id: currentUser.uid)
+                    
+                }
+                
             }
         })
+    }
+    
+    func keychainSignIn(id : String) {
+        let saveSuccessful: Bool = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("Data saved to keychain \(saveSuccessful)")
+        performSegue(withIdentifier: "showFeedVC", sender: nil)
     }
 
 }
