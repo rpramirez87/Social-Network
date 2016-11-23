@@ -1,14 +1,14 @@
 //
-//  CustomView.swift
+//  CustomImageView.swift
 //  Social-Network
 //
-//  Created by Ron Ramirez on 11/20/16.
+//  Created by Ron Ramirez on 11/23/16.
 //  Copyright © 2016 Mochi Apps. All rights reserved.
 //
 
 import UIKit
 
-class CustomView: UIView {
+class CustomImageView: UIImageView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,9 +21,13 @@ class CustomView: UIView {
         //Off sets in the layer's shadows
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         
-        //Corner radius
         layer.cornerRadius = 2.0
         
     }
-
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = self.frame.width / 2
+        self.clipsToBounds = true
+    }
 }

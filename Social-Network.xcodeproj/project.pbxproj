@@ -12,6 +12,8 @@
 		D95546F71DE223D50092FB2F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95546F61DE223D50092FB2F /* RoundButton.swift */; };
 		D95546F91DE256E70092FB2F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95546F81DE256E70092FB2F /* CustomTextField.swift */; };
 		D95546FB1DE258B00092FB2F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95546FA1DE258B00092FB2F /* CustomButton.swift */; };
+		D9938CAA1DE620FE00CE04F8 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9938CA91DE620FE00CE04F8 /* CustomImageView.swift */; };
+		D9938CAC1DE6560400CE04F8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9938CAB1DE6560400CE04F8 /* PostCell.swift */; };
 		D9A833A91DE17EF000566B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A833A81DE17EF000566B88 /* AppDelegate.swift */; };
 		D9A833AB1DE17EF000566B88 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A833AA1DE17EF000566B88 /* LoginVC.swift */; };
 		D9A833AE1DE17EF000566B88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A833AC1DE17EF000566B88 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		D95546F61DE223D50092FB2F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		D95546F81DE256E70092FB2F /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D95546FA1DE258B00092FB2F /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D9938CA91DE620FE00CE04F8 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		D9938CAB1DE6560400CE04F8 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		D9A833A51DE17EF000566B88 /* Social-Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social-Network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A833A81DE17EF000566B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A833AA1DE17EF000566B88 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -120,7 +124,9 @@
 				D95546F41DE21E0D0092FB2F /* CustomView.swift */,
 				D95546F61DE223D50092FB2F /* RoundButton.swift */,
 				D95546F81DE256E70092FB2F /* CustomTextField.swift */,
+				D9938CA91DE620FE00CE04F8 /* CustomImageView.swift */,
 				D95546FA1DE258B00092FB2F /* CustomButton.swift */,
+				D9938CAB1DE6560400CE04F8 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A833AB1DE17EF000566B88 /* LoginVC.swift in Sources */,
+				D9938CAA1DE620FE00CE04F8 /* CustomImageView.swift in Sources */,
 				D95546F71DE223D50092FB2F /* RoundButton.swift in Sources */,
 				D95546F91DE256E70092FB2F /* CustomTextField.swift in Sources */,
 				D95546F51DE21E0D0092FB2F /* CustomView.swift in Sources */,
@@ -282,6 +289,7 @@
 				D95546FB1DE258B00092FB2F /* CustomButton.swift in Sources */,
 				D9A833A91DE17EF000566B88 /* AppDelegate.swift in Sources */,
 				D95546F21DE21D0A0092FB2F /* Constants.swift in Sources */,
+				D9938CAC1DE6560400CE04F8 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
