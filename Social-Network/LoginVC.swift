@@ -11,7 +11,9 @@ import FBSDKLoginKit
 import Firebase
 
 class LoginVC: UIViewController {
+    @IBOutlet weak var emailTxtField: CustomTextField!
 
+    @IBOutlet weak var passwordTxtField: CustomTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,11 +34,30 @@ class LoginVC: UIViewController {
             }else if result?.isCancelled == true {
                 print("User cancelled Facebook Authentication")
             }else {
-                
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
-                
             }
+        }
+    }
+    @IBAction func signinButtonTapped(_ sender: Any) {
+        
+        if let email = emailTxtField.text, let password = passwordTxtField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                
+                if error == nil {
+                    print("Email user is authenticated")
+                }else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        
+                        if error != nil {
+                            print("Unable to authenticate with Firebase using email")
+                        } else {
+                            print("Sucessfully authenticated with Firebase")
+                        }
+                    })
+                }
+        })
+        
         }
         
         
