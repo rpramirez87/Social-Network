@@ -66,5 +66,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access to Photos is required for posting images.</string>
 </dict>
 </plist>

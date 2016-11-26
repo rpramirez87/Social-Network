@@ -26,16 +26,16 @@ class PostCell: UITableViewCell {
         self.captionTextView.text = post.caption
         self.likesLabel.text =  "\(post.likes)"
         
-        let photoURL = post.imageUrl
-        print(photoURL)
-        let url = NSURL(string : photoURL)
-        
-        //If data can be converted
-        if let data = NSData(contentsOf: url as! URL){
-            //Use the Image
-            let img = UIImage(data : data as Data)
-            self.postImageView.image = img
-        }
+//        let photoURL = post.imageUrl
+//        print(photoURL)
+//        let url = NSURL(string : photoURL)
+//        
+//        //If data can be converted
+//        if let data = NSData(contentsOf: url as! URL){
+//            //Use the Image
+//            let img = UIImage(data : data as Data)
+//            self.postImageView.image = img
+//        }
 
         
     }
