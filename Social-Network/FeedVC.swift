@@ -125,10 +125,30 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 }else {
                     print("Successfully downloaded image to Firebase StoragE")
                     let downloadURL = metaData?.downloadURL()?.absoluteString
+                    if let url = downloadURL {
+                        self.postToFirebase(imgUrl: url)
+                    }
                 }
             }
         }
+    }
+    
+    func postToFirebase(imgUrl : String) {
+        let post : Dictionary<String, AnyObject> = [
+            "caption" : captionTextField.text as AnyObject,
+            "imageUrl" : imgUrl as AnyObject,
+            "likes" : 0 as AnyObject
+        ]
         
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        
+        captionTextField.text = ""
+        didSelectImage = false
+        cameraImageView.image = UIImage(named: "add-image")
+        
+        self.tableView.reloadData()
         
     }
 
