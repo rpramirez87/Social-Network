@@ -54,7 +54,8 @@ class LoginVC: UIViewController {
                 if error == nil {
                     print("Email user is authenticated")
                     if let currentUser = user {
-                        self.keychainSignIn(id: currentUser.uid)
+                        let currentUserData = ["provider" : currentUser.providerID]
+                        self.keychainSignIn(id : currentUser.uid, userData: currentUserData)
                         
                     }
                 }else {
@@ -65,8 +66,8 @@ class LoginVC: UIViewController {
                         } else {
                             print("Sucessfully authenticated with Firebase")
                             if let currentUser = user {
-                                self.keychainSignIn(id: currentUser.uid)
-                                
+                                let currentUserData = ["provider" : currentUser.providerID]
+                                self.keychainSignIn(id : currentUser.uid, userData: currentUserData)
                             }
                         }
                     })
@@ -88,7 +89,8 @@ class LoginVC: UIViewController {
             } else {
                 print("Successfully authenticated with Firebase")
                 if let currentUser = user {
-                    self.keychainSignIn(id: currentUser.uid)
+                    let currentUserData = ["provider" : credential.provider ]
+                    self.keychainSignIn(id : currentUser.uid, userData: currentUserData)
                     
                 }
                 
@@ -96,7 +98,8 @@ class LoginVC: UIViewController {
         })
     }
     
-    func keychainSignIn(id : String) {
+    func keychainSignIn(id : String, userData : Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let saveSuccessful: Bool = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Data saved to keychain \(saveSuccessful)")
         performSegue(withIdentifier: "showFeedVC", sender: nil)
