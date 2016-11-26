@@ -22,6 +22,7 @@
 		D9A833BB1DE17F1100566B88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9A833BA1DE17F1100566B88 /* GoogleService-Info.plist */; };
 		D9AB35041DE8E83C0026D658 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AB35031DE8E83C0026D658 /* DataService.swift */; };
 		D9ADA09B1DE588B600DE53DA /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ADA09A1DE588B600DE53DA /* FeedVC.swift */; };
+		D9D4B1AC1DE91FE4009E53A8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D4B1AB1DE91FE4009E53A8 /* Post.swift */; };
 		FDDDB5937063EEF22D7987E6 /* Pods_Social_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4BA221E3249875C3A03A2C /* Pods_Social_Network.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		D9AB35031DE8E83C0026D658 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D9ADA09A1DE588B600DE53DA /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		D9B9451A1DE50D0400CBDDB8 /* Social-Network.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social-Network.entitlements"; sourceTree = "<group>"; };
+		D9D4B1AB1DE91FE4009E53A8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		D9E72D571DE1822000C92620 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D9D4B1AB1DE91FE4009E53A8 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				D9A833AB1DE17EF000566B88 /* LoginVC.swift in Sources */,
 				D9938CAA1DE620FE00CE04F8 /* CustomImageView.swift in Sources */,
 				D95546F71DE223D50092FB2F /* RoundButton.swift in Sources */,
+				D9D4B1AC1DE91FE4009E53A8 /* Post.swift in Sources */,
 				D95546F91DE256E70092FB2F /* CustomTextField.swift in Sources */,
 				D95546F51DE21E0D0092FB2F /* CustomView.swift in Sources */,
 				D9AB35041DE8E83C0026D658 /* DataService.swift in Sources */,

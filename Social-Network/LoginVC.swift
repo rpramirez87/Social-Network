@@ -74,9 +74,7 @@ class LoginVC: UIViewController {
                 }
         })
         
-        }
-        
-        
+        } 
     }
     
     //MARK: Helper Functions
